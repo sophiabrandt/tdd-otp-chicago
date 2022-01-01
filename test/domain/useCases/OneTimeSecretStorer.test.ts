@@ -1,8 +1,8 @@
-import { Secret } from '../../src/models/Secret';
-import { UrlId } from '../../src/models/UrlId';
-import { OneTimeSecretStorer } from '../../src/useCases/OneTimeSecretStorer';
-import { SecretRepository } from '../../src/useCases/SecretRepository';
-import { TokenGenerator } from '../../src/useCases/TokenGenerator';
+import { Secret } from '../../../src/domain/models/Secret';
+import { UrlId } from '../../../src/domain/models/UrlId';
+import { SecretRepository } from '../../../src/domain/ports/out/SecretRepository';
+import { TokenGenerator } from '../../../src/domain/ports/out/TokenGenerator';
+import { OneTimeSecretStorer } from '../../../src/domain/useCases/OneTimeSecretStorer';
 
 describe('OneTimeSecretStorer Test', function() {
     it('should store the secret and return an UrlId', async () => {
