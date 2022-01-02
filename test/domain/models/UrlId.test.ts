@@ -8,4 +8,7 @@ describe('UrlId Test', function() {
     it('should throw an error if the UrlId has less than 10 characters', () => {
         expect(() => new UrlId('a'.repeat(10))).toThrow(UrlIdTooShortError);
     });
+    it('should return a string representation on the toString method', () => {
+        expect(new UrlId('x'.repeat(11)).toString()).toBe('x'.repeat(11))
+    });
 });

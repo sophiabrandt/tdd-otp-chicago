@@ -87,7 +87,7 @@ To get a local copy up and running follow these steps:
 
 ### Prerequisites
 
-You'll need Node.js.
+You'll need Node.js, Docker and [docker compose](https://docs.docker.com/engine/reference/commandline/compose/).
 
 ### Installation
 
@@ -98,6 +98,11 @@ You'll need Node.js.
 2. Install NPM packages (via [pnpm](https://pnpm.io))
    ```sh
    pnpm install
+   ```
+
+3. Run Makefile:
+   ```sh
+   make all
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>

@@ -1,0 +1,13 @@
+services:
+  db:
+    image: bitnami/mongodb:4.4.11
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=${DB_NAME}
+    restart: always
+    volumes:
+      - db-data:/data/db:delegated
+
+volumes:
+  db-data:

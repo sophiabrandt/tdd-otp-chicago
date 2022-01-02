@@ -6,6 +6,9 @@ describe('Secret Test', function() {
         expect(new Secret('1234ac')).toBeInstanceOf(Secret);
     });
     it('should throw an error if the secret has less than 3 chars', () => {
-        expect(() => new Secret('12')).toThrow(SecretTooShortError);
+        expect(() => new Secret('ab')).toThrow(SecretTooShortError);
+    });
+    it('should return a string representation on the toString method', () => {
+        expect(new Secret('abcde').toString()).toBe('abcde');
     });
 });
