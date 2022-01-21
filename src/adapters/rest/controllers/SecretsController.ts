@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import { Secret } from '../../domain/models/Secret';
-import { SecretStorer } from '../../domain/ports/in/SecretStorer';
-import { ValidationError } from '../../domain/rest/errors/ValidationError';
+import { Secret } from '../../../domain/models/Secret';
+import { SecretStorer } from '../../../domain/ports/in/SecretStorer';
+import { ValidationError } from '../../../domain/rest/errors/ValidationError';
 
 export class SecretsController {
     private static validateRequest(req: Request): void {
@@ -10,15 +10,17 @@ export class SecretsController {
         }
     }
 
+
     constructor(private secretStorer: SecretStorer) {}
 
-    async createSecret(req: Request, res: Response, next: NextFunction): Promise<void> {
+    createSecret = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
             SecretsController.validateRequest(req);
-            const urlId = await this.secretStorer.storeSecret(new Secret(req.body.secret));
+            const secret = new Secret(req.body.secret);
+            const urlId = await this.secretStorer.storeSecret(secret);
             res.status(201).json(urlId);
         } catch (e) {
             next(e);
         }
-    }
+    };
 }

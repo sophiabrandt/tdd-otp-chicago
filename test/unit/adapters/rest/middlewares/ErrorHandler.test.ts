@@ -1,10 +1,10 @@
 import { NextFunction, request, Request, response, Response } from 'express';
 import { Error } from 'mongoose';
-import { SecretNotFoundInRepositoryError } from '../../../src/domain/models/errors/SecretNotFoundInRepositoryError';
-import { SecretTooShortError } from '../../../src/domain/models/errors/SecretTooShortError';
-import { UrlIdTooShortError } from '../../../src/domain/models/errors/UrlIdTooShortError';
-import { ValidationError } from '../../../src/domain/rest/errors/ValidationError';
-import { errorHandler } from '../../../src/rest/middlewares/ErrorHandler';
+import { errorHandler } from '../../../../../src/adapters/rest/middlewares/ErrorHandler';
+import { SecretNotFoundInRepositoryError } from '../../../../../src/domain/models/errors/SecretNotFoundInRepositoryError';
+import { SecretTooShortError } from '../../../../../src/domain/models/errors/SecretTooShortError';
+import { UrlIdTooShortError } from '../../../../../src/domain/models/errors/UrlIdTooShortError';
+import { ValidationError } from '../../../../../src/domain/rest/errors/ValidationError';
 
 describe('ErrorHandler Test', () => {
     it('should send an uncontrolled error', () => {

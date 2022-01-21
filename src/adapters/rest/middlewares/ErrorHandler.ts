@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
-import { SecretNotFoundInRepositoryError } from '../../domain/models/errors/SecretNotFoundInRepositoryError';
-import { SecretTooShortError } from '../../domain/models/errors/SecretTooShortError';
-import { UrlIdTooShortError } from '../../domain/models/errors/UrlIdTooShortError';
-import { ValidationError } from '../../domain/rest/errors/ValidationError';
+import { SecretNotFoundInRepositoryError } from '../../../domain/models/errors/SecretNotFoundInRepositoryError';
+import { SecretTooShortError } from '../../../domain/models/errors/SecretTooShortError';
+import { UrlIdTooShortError } from '../../../domain/models/errors/UrlIdTooShortError';
+import { ValidationError } from '../../../domain/rest/errors/ValidationError';
 
 export const errorHandler = (error: Error, req: Request, res: Response, next: NextFunction) => {
     if (error instanceof ValidationError ||

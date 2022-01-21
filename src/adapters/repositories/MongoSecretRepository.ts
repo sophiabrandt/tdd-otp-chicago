@@ -1,4 +1,5 @@
-import * as mongoose from 'mongoose';
+import 'dotenv/config';
+import mongoose from 'mongoose';
 import { SecretNotFoundInRepositoryError } from '../../domain/models/errors/SecretNotFoundInRepositoryError';
 import { Secret } from '../../domain/models/Secret';
 import { UrlId } from '../../domain/models/UrlId';
@@ -9,8 +10,10 @@ export class MongoSecretRepository implements SecretRepository {
 
     private static async setConnection() {
         if (mongoose.connection?.readyState === 0) {
-            await mongoose.connect('mongodb://localhost:27017/onetimesecret');
-            console.log('Connected to database');
+            await mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`);
+            if (process.env.NODE_ENV !== 'test') {
+                console.log('Connected to database');
+            }
         }
     }
 

@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --forceExit",
-    "test:watch": "jest --watchAll --forceExit"
+    "test": "NODE_ENV=test jest --forceExit",
+    "test:watch": "NODE_ENV=test jest --watchAll --forceExit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^14.2.0",
     "express": "^4.17.2",
     "mongoose": "^6.1.4",
     "typescript": "^4.5.4",
@@ -20,8 +21,10 @@
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.5",
+    "@types/supertest": "^2.0.11",
     "@types/uniqid": "^5.3.2",
     "jest": "^27.4.5",
+    "supertest": "^6.2.2",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0"
   },

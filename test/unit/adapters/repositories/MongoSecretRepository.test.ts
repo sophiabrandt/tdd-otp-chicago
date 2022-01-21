@@ -1,9 +1,9 @@
 import * as mongoose from 'mongoose';
-import { MongoSecretRepository } from '../../../src/adapters/repositories/MongoSecretRepository';
-import { SecretModel } from '../../../src/adapters/repositories/SecretModel';
-import { SecretNotFoundInRepositoryError } from '../../../src/domain/models/errors/SecretNotFoundInRepositoryError';
-import { Secret } from '../../../src/domain/models/Secret';
-import { UrlId } from '../../../src/domain/models/UrlId';
+import { MongoSecretRepository } from '../../../../src/adapters/repositories/MongoSecretRepository';
+import { SecretModel } from '../../../../src/adapters/repositories/SecretModel';
+import { SecretNotFoundInRepositoryError } from '../../../../src/domain/models/errors/SecretNotFoundInRepositoryError';
+import { Secret } from '../../../../src/domain/models/Secret';
+import { UrlId } from '../../../../src/domain/models/UrlId';
 
 jest.mock('mongoose', () => ({
     connect: jest.fn(),
@@ -12,7 +12,7 @@ jest.mock('mongoose', () => ({
     },
 }));
 
-jest.mock('../../../src/adapters/repositories/SecretModel', () => ({
+jest.mock('../../../../src/adapters/repositories/SecretModel', () => ({
         SecretModel: class SecretModel {
         }
     }
