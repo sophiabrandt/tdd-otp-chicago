@@ -27,8 +27,6 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -54,8 +52,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
@@ -66,18 +62,15 @@ Code from the [Udemy course: **Building APIs doing TDD in Node and Typescript (a
 
 _Image by [Muzammil Soorma](https://unsplash.com/@muzammilo)_
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
-* [Node.js](https://nodejs.org/)
-* [TypeScript](https://www.typescriptlang.org/)
-* [Jest](https://jest.io)
+- [Node.js](https://nodejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jest.io)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 
@@ -89,6 +82,8 @@ To get a local copy up and running follow these steps:
 
 You'll need Node.js, Docker and [docker compose](https://docs.docker.com/engine/reference/commandline/compose/).
 
+All commands are tested with [pnpm](https://pnpm.io). If you want to use npm or yarn, you'll need to replace the necessary references.
+
 ### Installation
 
 1. Clone the repo
@@ -96,30 +91,28 @@ You'll need Node.js, Docker and [docker compose](https://docs.docker.com/engine/
    git clone https://github.com/sophiabrandt/tdd-otp-chicago.git
    ```
 2. Install NPM packages (via [pnpm](https://pnpm.io))
+
    ```sh
    pnpm install
    ```
 
 3. Run Makefile:
    ```sh
-   make all
+   make docker
+   make dev
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
 ```sh
-pnpm run test
+make test
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 
@@ -129,8 +122,6 @@ See the [open issues](https://github.com/sophiabrandt/tdd-otp-chicago/issues) fo
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
 
 ## Contributing
@@ -139,8 +130,6 @@ This is not an open-source project, but you are free to contribute if you like.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
 
 ## License
@@ -148,8 +137,6 @@ This is not an open-source project, but you are free to contribute if you like.
 No license. The original code can be found [here][udemy].
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 
@@ -161,29 +148,20 @@ Project Link: [https://github.com/sophiabrandt/tdd-otp-chicago](https://github.c
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
-* [Josep Mir][udemy]
+- [Josep Mir][udemy]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/sophiabrandt/tdd-otp-chicago.svg?style=for-the-badge
-
 [contributors-url]: https://github.com/sophiabrandt/tdd-otp-chicago/graphs/contributors
-
 [issues-shield]: https://img.shields.io/github/issues/sophiabrandt/tdd-otp-chicago.svg?style=for-the-badge
-
 [issues-url]: https://github.com/sophiabrandt/tdd-otp-chicago/issues
-
 [chicago-image]: muzammil-soorma-chicago-unsplash.jpg
-
 [udemy]: https://www.udemy.com/course/building-apis-doing-tdd-in-node-and-typescript-and-jest/

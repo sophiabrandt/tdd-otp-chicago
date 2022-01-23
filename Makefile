@@ -9,13 +9,29 @@ export DB_NAME = onetimesecret
 # $(shell git rev-parse --short HEAD)
 VERSION := 1.0
 
-dev: docker-up
+docker: docker-up
+
+run: dev
+
+test: test-unit test-int test-e2e
+
+# ==============================================================================
+# Run server locally
+
+dev:
+	pnpm dlx ts-node 'src/server.ts'
 
 # ==============================================================================
 # Running tests within the local computer
 
-test:
-	pnpm run test
+test-unit:
+	pnpm run test:unit
+
+test-int:
+	pnpm run test:int
+
+test-e2e:
+	pnpm run test:e2e
 
 test-watch:
 	pnpm run test:watch
