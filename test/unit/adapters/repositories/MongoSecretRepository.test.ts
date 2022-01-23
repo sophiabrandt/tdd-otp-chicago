@@ -26,7 +26,7 @@ describe('MongoSecretRepository Test', function() {
         new MongoSecretRepository();
 
         expect(mongoose.connect).toBeCalledTimes(1);
-        expect(mongoose.connect).toBeCalledWith('mongodb://localhost:27017/onetimesecret');
+        expect(mongoose.connect).toBeCalledWith('mongodb://localhost:27017/test_onetimesecret');
     });
     it('should not connect to the database if the connection is already established', () => {
         expect.assertions(1);

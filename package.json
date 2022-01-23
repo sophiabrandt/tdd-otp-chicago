@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest --forceExit",
-    "test:watch": "NODE_ENV=test jest --watchAll --forceExit"
+    "test:watch": "NODE_ENV=test jest --runInBand --watchAll --forceExit",
+    "test:unit": "NODE_ENV=test jest --runInBand --forceExit --testPathPattern=test/unit",
+    "test:int": "NODE_ENV=test jest --runInBand --forceExit --testPathPattern=test/integration",
+    "test:e2e": "NODE_ENV=test jest --runInBand --forceExit --testPathPattern=test/e2e"
   },
   "keywords": [],
   "author": "",

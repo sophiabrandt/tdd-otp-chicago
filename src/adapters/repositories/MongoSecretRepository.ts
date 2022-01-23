@@ -10,9 +10,11 @@ export class MongoSecretRepository implements SecretRepository {
 
     private static async setConnection() {
         if (mongoose.connection?.readyState === 0) {
-            await mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`);
             if (process.env.NODE_ENV !== 'test') {
+                await mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`);
                 console.log('Connected to database');
+            } else {
+                await mongoose.connect('mongodb://localhost:27017/test_onetimesecret');
             }
         }
     }
