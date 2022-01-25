@@ -96,7 +96,13 @@ All commands are tested with [pnpm](https://pnpm.io). If you want to use npm or 
    pnpm install
    ```
 
-3. Run Makefile:
+3. copy `env.example` to `.env` (or rename file):
+
+   ```sh
+   cp env.example .env
+   ```
+
+4. Run Makefile:
    ```sh
    make docker
    make dev
